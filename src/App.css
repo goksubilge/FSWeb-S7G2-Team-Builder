@@ -3,18 +3,19 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
   background-color: #F8333C;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /*animation: App-logo-spin infinite 20s linear; */
   }
 }
 
 .App-header {
+  background-image: url('./../public/Seinfeld_poster_serie0.jpg');
   background-color: #DBD5B5;
   min-height: 100vh;
   display: flex;
@@ -28,14 +29,20 @@
 h1 {
   text-transform: uppercase;
   font-size: 40px;
-  color: #FCAB10;
+  color:#44AF69;
+}
+form {
+  text-transform: uppercase;
+  font-size: 20px;
 }
 button {
-  color:#44AF69;
+  color: #FCAB10;
+  font-size: 20px;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #44AF69;
+  /*61dafb;*/
 }
 
 @keyframes App-logo-spin {
