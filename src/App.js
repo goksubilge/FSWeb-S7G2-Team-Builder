@@ -14,9 +14,15 @@ const [memberList, setMemberList ] = useState ([
     {name: "Susan Ross", category:"support", role: "Costanza's fiancee" },
     {name: "Leslie", category:"support", role: "Kramer's GF" },
   ])
-  
+  const [editOrder,setEditOrder] = useState(null);
+
+  function editHandler (order) {
+    console.log("edirHandler kontrolü");
+    setEditOrder(order);
+  }
   function addMember (newMember) {
     console.log("addMEmber kontrolü", newMember)
+    // buraya eğer aynı değer varsa editliğim değeri yeniden yazdırma diyeceğim.
     const newMemberList = [...memberList, newMember];
     setMemberList(newMemberList);
   }
@@ -27,9 +33,10 @@ const [memberList, setMemberList ] = useState ([
         {memberList.map((member, i) => (
           <span key={i}>
             {member.name} - {member.category}- {member.role}
+        <button onClick={()=> editHandler(i)}>.   ORDER   .</button>
           </span>
         ))}
-        <Form addMember={addMember}/>
+        <Form addMember={addMember} editingMember={memberList[editOrder]}/>
 
       </header>
     </div>
@@ -49,4 +56,4 @@ export default App;
   // bir fonksiyon ile kendine gelen member ı memberList in sonuna ekletiyorum. ama pushla uğraşmıyorum direk spirit ile yaptım.
 // <Form/> içine form.js  için bir kapı açıyorum. addmember içine addMEmber fonksiyonumu koyarak üye eklettiricem. sonra Form.js e geçtim. artık bir parametreyle çalışan fons oldu. onlar da prosps larımform fonksiyonuna props parametresini verdim.
 //submit fonksiyonuna props.addMember(dataForm) ekledim. her eklediğim üyeyi gidip ana arrayime ekleyecek ve bana gösterecek.
-  
+  // editingMember propune memberList imde ilgili editOrder ı verir bana, beklentim bu.

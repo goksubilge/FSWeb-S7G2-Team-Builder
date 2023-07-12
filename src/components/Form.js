@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // inputlardaki value ları dataForm daki boş değerlerle eşliyorum ki başlangıçta bana yazacağım kutuyu boş göstersin.
 // onChangeFN inputlara yerleştiriyorum ki her bir eventte fonksiyonu çalıştırıyorum ve formu harf harf dolduruyorum.
 // onchange fonk içini düzenliyorum ki fonk olsun işlem yapsın.
@@ -7,6 +7,16 @@ import React, { useState } from "react";
 // onchange={chanceHandler} fons ile de dataForm da yaptığım değişiklikleri göstersin istiyorum ekranda. değişen verileri bu fonks göndermiş oluyorum.
 
 function Form (props) {
+  console.log("Form.js in proplar:")
+
+  useEffect (() => {
+    console.log ("useEffect kontrolü:");
+    if (props.editingMember) {
+      console.log("editing member var!");
+      setDataForm(props.editingMember);
+    }
+  }
+  ,[props.editingMember])
   
   const ilkData = {
     name: "", 
