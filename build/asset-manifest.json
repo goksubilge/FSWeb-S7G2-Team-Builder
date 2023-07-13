@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7faba56d.css",
+    "main.js": "/static/js/main.252fa170.js",
+    "static/js/787.1194cd5d.chunk.js": "/static/js/787.1194cd5d.chunk.js",
+    "static/media/Seinfeld_poster_serie0.jpg": "/static/media/Seinfeld_poster_serie0.8419f83a2e0cca19da08.jpg",
+    "index.html": "/index.html",
+    "main.7faba56d.css.map": "/static/css/main.7faba56d.css.map",
+    "main.252fa170.js.map": "/static/js/main.252fa170.js.map",
+    "787.1194cd5d.chunk.js.map": "/static/js/787.1194cd5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7faba56d.css",
+    "static/js/main.252fa170.js"
+  ]
+}

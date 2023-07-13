@@ -42,17 +42,18 @@ function Form (props) {
         //console.log("submitfonks çalıştırma kontrolü");
         e.preventDefault();
         props.addMember(dataForm);
+        resetFN();
   }
 
   return (
         <form onSubmit={submitFN}>
           <strong htmlFor="name">name:</strong>
-          <input type="text" name="name" value={dataForm.name} onChangeFN={onChangeFN} placeholder="Jerry Seinfeld"/><br></br>
+          <input type="text" name="name" value={dataForm.name} onChange={onChangeFN} placeholder="Jerry Seinfeld"/><br></br>
           <strong htmlFor="category">category:</strong>
-          <input type="text" name="category" value={dataForm.category} onChangeFN={onChangeFN} placeholder="main"/><br></br>
+          <input type="text" name="category" value={dataForm.category} onChange={onChangeFN} placeholder="main"/><br></br>
           <strong htmlFor="role">role:</strong>
-          <input type="text" name="role" value={dataForm.role} onChangeFN={onChangeFN}/><br></br>
-          <button type="submit" onClick={submitFN}>.   SEND   .</button><br></br>
+          <input type="text" name="role" value={dataForm.role} onChange={onChangeFN}/><br></br>
+          <button type="submit" onClick={submitFN}> {props.editingMember ? "ORDER" : "SEND"}</button><br></br>
           <button type="reset" onClick={resetFN}>.   RESET   .</button>
         </form>
   )
